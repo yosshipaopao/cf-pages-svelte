@@ -27,8 +27,7 @@
 	{/if}
 
 	{#if form?.missing}
-		<p class="text-3xl font-bold text-accent">Missing Form</p>
-		/
+		<p class="text-3xl font-bold text-error">Missing Form</p>
 	{/if}
 
 	<div class="form-control">
@@ -178,6 +177,14 @@
 			></textarea>
 		</span>
 	</label>
+
+	{#if form?.success}
+		<p class="text-3xl font-bold text-accent">Success!!!!</p>
+	{/if}
+
+	{#if form?.missing}
+		<p class="text-3xl font-bold text-error">Missing Form</p>
+	{/if}
 
 	<div class="form-control">
 		<input type="submit" class="btn btn-outline btn-primary btn-wide" value="送信" />
